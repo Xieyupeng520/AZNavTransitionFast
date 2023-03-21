@@ -5,18 +5,19 @@
 //  Created by cocozzhang on 2023/3/9.
 //
 
-#import "PushPopTransition.h"
+#import "AZPushPopTransition.h"
 
-@implementation PushPopTransition
+@implementation AZPushPopTransition
 
-static CGFloat const kDamping = 1;
-static CGFloat const kInitialSpringVelocity = 0.5f;
+static CGFloat const kTransTime = 0.2; // 转场时间（单位：s，系统是0.5s）
+static CGFloat const kDamping = 1; // 阻尼系数（设1就没有来回振荡效果）
+static CGFloat const kInitialSpringVelocity = 0.5f; // 初始速度（pt/s)
 static CGFloat const kAlpha = 0.8f;
 static CGFloat const kTranslationRatio = 0.3; //偏移率（相对于屏幕宽）
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.transTime = 0.5; //default value is same as system
+        self.transTime = kTransTime;
     }
     return self;
 }

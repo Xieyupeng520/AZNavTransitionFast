@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PushPopTransition : NSObject<UIViewControllerAnimatedTransitioning>
+@interface AZPushPopTransition : NSObject<UIViewControllerAnimatedTransitioning>
 @property(nonatomic, assign)UINavigationControllerOperation operation; //push or pop
 /**转场时间**/
 @property(nonatomic)NSTimeInterval transTime;

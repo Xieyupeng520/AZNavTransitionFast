@@ -6,8 +6,9 @@
 //
 
 #import "ViewController.h"
-#import "PushPopTransition.h"
+#import "AZPushPopTransition.h"
 #import "VCGlobalDataManager.h"
+#import "UINavigationController+AZPushPopTransition.h"
 
 #define LOG_MORE 0
 
@@ -148,13 +149,24 @@ static double time_willDisappear = 0;
     }
 }
 
+//- (void)handlePushOrPop:(Bool)push {
+//    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];
+//    ViewController* vc = [storyBoard instantiateViewControllerWithIdentifier:@"AZNavTransitionDebugVC"];
+//
+//    if (push) {
+//        [self.navigationController pushViewControllerFast:vc animated:NO];
+//    } else {
+//        [self.navigationController popViewControllerFastAnimated:NO];
+//    }
+//}
+
 #pragma mark - UINavigationControllerDelegate
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
                                                fromViewController:(UIViewController *)fromVC
                                                  toViewController:(UIViewController *)toVC{
     NSAssert(operation != UINavigationControllerOperationNone, @"unknown operation");
-    PushPopTransition *transition = [[PushPopTransition alloc] init];
+    AZPushPopTransition *transition = [[AZPushPopTransition alloc] init];
     transition.operation = operation;
     transition.transTime = [VCGlobalDataManager instance].transTime;
     return transition;

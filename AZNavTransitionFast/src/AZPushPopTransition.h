@@ -10,8 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AZPushPopTransition : NSObject<UIViewControllerAnimatedTransitioning>
-@property(nonatomic, assign)UINavigationControllerOperation operation; //push or pop
-/**转场时间**/
+/// push or pop
+@property(nonatomic, assign)UINavigationControllerOperation operation;
+/// 转场时间
 @property(nonatomic)NSTimeInterval transTime;
 @end
 

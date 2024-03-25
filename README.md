@@ -4,19 +4,19 @@
 
 push效果对比
 
-<img src="gif/push转场对比.gif" alt="push转场对比" style="zoom:67%;" />
+<img src="gif/push转场对比.gif" alt="push转场对比" style="zoom:47%;" />
 
 慢动作
 
-<img src="gif/push转场对比_slow.gif" alt="push转场对比_slow" style="zoom:67%;" />
+<img src="gif/push转场对比_slow.gif" alt="push转场对比_slow" style="zoom:47%;" />
 
 pop效果对比
 
-<img src="gif/pop转场对比.gif" alt="pop转场对比" style="zoom:67%;" />
+<img src="gif/pop转场对比.gif" alt="pop转场对比" style="zoom:47%;" />
 
 慢动作
 
-<img src="gif/pop转场对比_slow.gif" alt="pop转场对比_slow" style="zoom:67%;" />
+<img src="gif/pop转场对比_slow.gif" alt="pop转场对比_slow" style="zoom:47%;" />
 
 ### 使用方式
 
@@ -26,12 +26,13 @@ pop效果对比
 #import "UINavigationController+AZPushPopTransition.h"
 ```
 
-然后在push和pop的时候分别调用
+然后在 push 时调用一行代码即可（push 加速了的页面，pop 同页面自动加速）
 
 ```objective-c
 [self.navigationController pushViewControllerFast:vc animated:YES];
-[self.navigationController popViewControllerFastAnimated:YES];
 ```
 
-默认速度为0.2s，如果需要修改，可以去`AZPushPopTransition.m`中修改`kTransTime`的值。
+如果需要全局替换，也可以直接通过 swizzle 替换系统导航栏的`pushViewController:animated:`方法
+
+默认速度为 0.2s，如果需要修改，可以去`AZPushPopTransition.m`中修改`kTransTime`的值。
 

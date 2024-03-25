@@ -10,7 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UINavigationController (AZPushPopTransition)
+
+/// push 加速。push加速过的页面，pop也会加速
 - (void)pushViewControllerFast:(UIViewController *)viewController animated:(BOOL)animated;
+
+/// pop 加速
 - (UIViewController *)popViewControllerFastAnimated:(BOOL)animated;
 @end
 

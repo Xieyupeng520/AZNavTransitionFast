@@ -10,11 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VCGlobalDataManager : NSObject
-/**转场时间**/
+/// 转场时间
 @property(nonatomic)NSTimeInterval transTime;
-/**使用系统转场**/
+/// 使用系统转场
 @property(nonatomic)BOOL useSystemTransition;
-/**慢动作**/
+/// 慢动作
 @property(nonatomic)BOOL slowAnimations;
 
 + (instancetype)instance;

@@ -18,6 +18,8 @@
 		63B7482029C9D0CA00407B8A /* AZPushPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7481E29C9D0CA00407B8A /* AZPushPopTransition.m */; };
 		63B7482329C9D13400407B8A /* AZPushPopTransitionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7482229C9D13400407B8A /* AZPushPopTransitionHandler.m */; };
 		63B7482629C9D2EB00407B8A /* UINavigationController+AZPushPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7482529C9D2EB00407B8A /* UINavigationController+AZPushPopTransition.m */; };
+		CC4E70132BADAA39002638E7 /* UIViewController+AZPushPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E70122BADAA39002638E7 /* UIViewController+AZPushPopTransition.m */; };
+		CC4E70162BB159B2002638E7 /* AZSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E70142BB159B2002638E7 /* AZSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		63B7482229C9D13400407B8A /* AZPushPopTransitionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AZPushPopTransitionHandler.m; sourceTree = "<group>"; };
 		63B7482429C9D2EB00407B8A /* UINavigationController+AZPushPopTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+AZPushPopTransition.h"; sourceTree = "<group>"; };
 		63B7482529C9D2EB00407B8A /* UINavigationController+AZPushPopTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+AZPushPopTransition.m"; sourceTree = "<group>"; };
+		CC4E70112BADAA39002638E7 /* UIViewController+AZPushPopTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AZPushPopTransition.h"; sourceTree = "<group>"; };
+		CC4E70122BADAA39002638E7 /* UIViewController+AZPushPopTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AZPushPopTransition.m"; sourceTree = "<group>"; };
+		CC4E70142BB159B2002638E7 /* AZSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZSwizzle.m; sourceTree = "<group>"; };
+		CC4E70152BB159B2002638E7 /* AZSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZSwizzle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,10 @@
 				63B7482229C9D13400407B8A /* AZPushPopTransitionHandler.m */,
 				63B7482429C9D2EB00407B8A /* UINavigationController+AZPushPopTransition.h */,
 				63B7482529C9D2EB00407B8A /* UINavigationController+AZPushPopTransition.m */,
+				CC4E70112BADAA39002638E7 /* UIViewController+AZPushPopTransition.h */,
+				CC4E70122BADAA39002638E7 /* UIViewController+AZPushPopTransition.m */,
+				CC4E70152BB159B2002638E7 /* AZSwizzle.h */,
+				CC4E70142BB159B2002638E7 /* AZSwizzle.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -178,9 +188,11 @@
 				63B7482629C9D2EB00407B8A /* UINavigationController+AZPushPopTransition.m in Sources */,
 				63B7482329C9D13400407B8A /* AZPushPopTransitionHandler.m in Sources */,
 				639A8A1C29B9CD4F007882EE /* AppDelegate.m in Sources */,
+				CC4E70162BB159B2002638E7 /* AZSwizzle.m in Sources */,
 				639A8A2D29B9CD52007882EE /* main.m in Sources */,
 				639A8A1F29B9CD4F007882EE /* SceneDelegate.m in Sources */,
 				639A918029BB559A007882EE /* VCGlobalDataManager.m in Sources */,
+				CC4E70132BADAA39002638E7 /* UIViewController+AZPushPopTransition.m in Sources */,
 				63B7482029C9D0CA00407B8A /* AZPushPopTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

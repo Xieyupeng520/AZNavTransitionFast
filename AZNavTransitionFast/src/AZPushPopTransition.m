@@ -55,8 +55,8 @@ static CGFloat const kTranslationRatio = 0.3; //偏移率（相对于屏幕宽�
     double beginTime = CFAbsoluteTimeGetCurrent();
     [UIView animateWithDuration:duration
                           delay:0
-         usingSpringWithDamping:kDamping //阻尼系数（设1就没有来回振荡效果）
-          initialSpringVelocity:kInitialSpringVelocity //速度（pt/s)
+         usingSpringWithDamping:kDamping
+          initialSpringVelocity:kInitialSpringVelocity
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
             fromViewController.view.transform = from_travel_end;
@@ -84,6 +84,8 @@ static CGFloat const kTranslationRatio = 0.3; //偏移率（相对于屏幕宽�
     CGAffineTransform to_travel_begin = CGAffineTransformMakeTranslation (-CGRectGetWidth(containerView.bounds) * kTranslationRatio, 0);
     CGAffineTransform from_travel_end = CGAffineTransformMakeTranslation (CGRectGetWidth(containerView.bounds), 0);
     
+    //先摆好toVC的位置（可能会被导航栏的translucent影响位置）
+    toViewController.view.frame = [transitionContext finalFrameForViewController:toViewController];
     toViewController.view.transform = to_travel_begin;
     toViewController.view.alpha = kAlpha;
     
@@ -92,8 +94,8 @@ static CGFloat const kTranslationRatio = 0.3; //偏移率（相对于屏幕宽�
     double beginTime = CFAbsoluteTimeGetCurrent();
     [UIView animateWithDuration:duration
                           delay:0
-         usingSpringWithDamping:kDamping //阻尼系数（设1就没有来回振荡效果）
-          initialSpringVelocity:kInitialSpringVelocity //速度（pt/s)
+         usingSpringWithDamping:kDamping
+          initialSpringVelocity:kInitialSpringVelocity
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
             fromViewController.view.transform = from_travel_end;

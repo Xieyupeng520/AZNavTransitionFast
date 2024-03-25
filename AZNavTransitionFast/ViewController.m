@@ -149,17 +149,6 @@ static double time_willDisappear = 0;
     }
 }
 
-//- (void)handlePushOrPop:(Bool)push {
-//    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];
-//    ViewController* vc = [storyBoard instantiateViewControllerWithIdentifier:@"AZNavTransitionDebugVC"];
-//
-//    if (push) {
-//        [self.navigationController pushViewControllerFast:vc animated:NO];
-//    } else {
-//        [self.navigationController popViewControllerFastAnimated:NO];
-//    }
-//}
-
 #pragma mark - UINavigationControllerDelegate
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
@@ -170,5 +159,18 @@ static double time_willDisappear = 0;
     transition.operation = operation;
     transition.transTime = [VCGlobalDataManager instance].transTime;
     return transition;
+}
+
+#pragma mark - 代码使用示例，点击空白处即可触发快速转场（时间kTransTime）
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self handlePushFast];
+}
+
+- (void)handlePushFast {
+    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];
+    ViewController* vc = [storyBoard instantiateViewControllerWithIdentifier:@"AZNavTransitionDebugVC"];
+
+    [self.navigationController pushViewControllerFast:vc animated:YES];
 }
 @end
